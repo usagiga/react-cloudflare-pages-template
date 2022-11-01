@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# For husky
-npm run prepare
+# For husky / playwright
+pnpm run prepare

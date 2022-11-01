@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm install \
+pnpm add \
   @fortawesome/fontawesome-svg-core \
   @fortawesome/free-brands-svg-icons \
   @fortawesome/free-regular-svg-icons \
