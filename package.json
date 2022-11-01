@@ -10,7 +10,7 @@
   "scripts": {
     "start": "",
     "build": "",
-    "test": "",
+    "test": "playwright test -c playwright-ct.config.ts",
     "format": "prettier --list-different 'src/**/*.{js,jsx,ts,tsx,gql,graphql,json,css,scss}'",
     "format:fix": "prettier --write ./src",
     "lint": "pnpm run lint:es && pnpm run lint:style",
@@ -19,7 +19,7 @@
     "lint:es:fix": "eslint --max-warnings=0 --fix './src'",
     "lint:style": "stylelint --max-warnings=0 'src/**/*.{css,less,sass,scss}'",
     "lint:style:fix": "stylelint --max-warnings=0 --fix 'src/**/*.{css,less,sass,scss}'",
-    "prepare": "husky install"
+    "prepare": "husky install; playwright install"
   },
   "browserslist": {
     "production": [
@@ -34,6 +34,8 @@
     ]
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.27.1",
+    "@playwright/test": "^1.27.1",
     "@types/node": "^16.11.56",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
