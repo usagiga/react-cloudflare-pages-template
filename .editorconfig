@@ -7,6 +7,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
+tab_width = 4
 
 [*.go]
 indent_style = tab
@@ -16,9 +17,15 @@ indent_style = tab
 
 [*.{json,yml,yaml}]
 indent_size = 2
+tab_width = 2
 
 [*.{html,htm}]
 indent_size = 2
+tab_width = 2
+
+[{*.json.tftpl, *.tf, *.hcl, *.tfvars, *.tfstate, *.tfstate.backup}]
+indent_size = 2
+tab_width = 2
 
 [*.md]
 # Default
