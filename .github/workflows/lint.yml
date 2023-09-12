@@ -20,10 +20,15 @@ jobs:
         with:
           node-version: '20.6'
 
-      - run: npm ci
+      - name: 'Use pnpm 8'
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - args: [--frozen-lockfile]
 
       # Linters
-      - run: npm run lint
+      - run: pnpm run lint
 
       # Formatters
-      - run: npm run format
+      - run: pnpm run format

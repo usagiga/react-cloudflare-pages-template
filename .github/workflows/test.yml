@@ -20,7 +20,12 @@ jobs:
         with:
           node-version: '20.6'
 
-      - run: npm ci
+      - name: 'Use pnpm 8'
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - args: [--frozen-lockfile]
 
       # Run jest
-      - run: npm test
+      - run: pnpm test
