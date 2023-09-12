@@ -1,4 +1,4 @@
-name: "lint"
+name: "test"
 
 on:
   push:
@@ -13,12 +13,12 @@ jobs:
     name: Run test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: 'Use Node.js 17.9'
+      - name: 'Use Node.js 20.6'
         uses: actions/setup-node@v3
         with:
-          node-version: '17.9'
+          node-version: '20.6'
 
       - run: npm ci
 
