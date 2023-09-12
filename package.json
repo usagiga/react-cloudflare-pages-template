@@ -2,6 +2,10 @@
   "name": "%REPO_NAME%",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.6",
+    "pnpm": ">=8"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -24,13 +28,13 @@
     "eject": "react-scripts eject",
     "format": "prettier --list-different 'src/**/*.{js,jsx,ts,tsx,gql,graphql,json,css,scss}'",
     "format:fix": "prettier --write ./src",
-    "lint": "npm run lint:es && npm run lint:style",
-    "lint:fix": "npm run lint:es:fix && npm run lint:style:fix",
+    "lint": "pnpm run lint:es && pnpm run lint:style",
+    "lint:fix": "pnpm run lint:es:fix && pnpm run lint:style:fix",
     "lint:es": "eslint --max-warnings=0 './src'",
     "lint:es:fix": "eslint --max-warnings=0 --fix './src'",
     "lint:style": "stylelint --max-warnings=0 'src/**/*.{css,less,sass,scss}'",
     "lint:style:fix": "stylelint --max-warnings=0 --fix 'src/**/*.{css,less,sass,scss}'",
-    "prepare": "husky install"
+    "prepare": "npx only-allow pnpm && husky install && playwright install"
   },
   "browserslist": {
     "production": [
