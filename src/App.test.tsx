@@ -1,10 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { test, expect } from '@playwright/experimental-ct-react';
+import App from './App.tsx';
 
-test('renders hello world', () => {
-    // Example
-    render(<App />);
-    const helloWorldElement = screen.getByText(/Hello World!/i);
-    expect(helloWorldElement).toBeInTheDocument();
+test('renders hello world', async ({ mount }) => {
+  const appComponent = await mount(<App />);
+  await expect(appComponent).toContainText('Hello World!');
 });

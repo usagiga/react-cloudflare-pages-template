@@ -25,3 +25,4 @@ indent_size = 2
 
 [*.{js,jsx,ts,tsx,css,scss}]
 # To configure their rules, use ESLint / Prettier
+indent_size = 2
