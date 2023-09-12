@@ -27,5 +27,5 @@ jobs:
           run_install: |
             - args: [--frozen-lockfile]
 
-      # Run jest
+      # Run playwright
       - run: pnpm test

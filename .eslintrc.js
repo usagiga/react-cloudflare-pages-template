@@ -1,26 +1,30 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
+  globals: {
+    React: true,
+    JSX: true,
+  },
+  ignorePatterns: ['dist'],
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
     'airbnb',
     'airbnb/hooks',
-    'prettier'
+    'prettier',
   ],
   overrides: [
     {
       env: {
-        node: true
+        node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}'
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        sourceType: 'script'
-      }
+        sourceType: 'script',
+      },
     },
     {
       files: ['*.tsx'],
@@ -28,16 +32,20 @@ module.exports = {
         'react/prop-types': 'off',
       },
     },
+    {
+      // playwright
+      files: ['*.test.{js,jsx,ts,tsx}'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'jsx-a11y',
-    'react-hooks',
-  ],
+  plugins: ['react', 'jsx-a11y', 'react-refresh', 'react-hooks'],
   settings: {
     react: {
       version: 'detect',
@@ -49,6 +57,10 @@ module.exports = {
     },
   },
   rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
     'lines-between-class-members': [
       'error',
       'always',
@@ -101,6 +113,6 @@ module.exports = {
     'semi-style': ['error', 'last'],
     'no-extra-semi': 'error',
     'no-unexpected-multiline': 'error',
-    'no-unreachable': 'error'
-  }
+    'no-unreachable': 'error',
+  },
 };

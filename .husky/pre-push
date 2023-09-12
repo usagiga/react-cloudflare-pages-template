@@ -3,4 +3,4 @@
 
 pnpm run lint
 pnpm run format
-pnpm test -- --watchAll=false
+pnpm test
