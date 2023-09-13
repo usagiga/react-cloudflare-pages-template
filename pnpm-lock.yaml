@@ -12,8 +12,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   web-vitals:
-    specifier: ^2.1.4
-    version: 2.1.4
+    specifier: ^3.0.0
+    version: 3.4.0
 
 devDependencies:
   '@playwright/experimental-ct-react':
@@ -3809,8 +3809,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /web-vitals@2.1.4:
-    resolution: {integrity: sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==}
+  /web-vitals@3.4.0:
+    resolution: {integrity: sha512-n9fZ5/bG1oeDkyxLWyep0eahrNcPDF6bFqoyispt7xkW0xhDzpUBTgyDKqWDi1twT0MgH4HvvqzpUyh0ZxZV4A==}
     dev: false
 
   /which-boxed-primitive@1.0.2:
