@@ -12,6 +12,7 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
+    'plugin:tailwindcss/recommended',
     'airbnb',
     'airbnb/hooks',
     'prettier',
@@ -21,7 +22,7 @@ module.exports = {
       env: {
         node: true,
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: ['.eslintrc.{js,cjs}', 'tailwind.config.js', 'vite.config.ts'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -107,6 +108,8 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    // tailwindcss
+    'tailwindcss/no-custom-classname': 'off',
     // semicolon
     semi: ['error', 'always'],
     'semi-spacing': ['error', { after: true, before: false }],
