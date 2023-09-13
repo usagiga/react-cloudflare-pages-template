@@ -10,10 +10,10 @@ Template for React project on Cloudflare Pages
 ## Usage
 
 1. Replace all variables
-1. (Optional) Use `./scripts` to set up
-1. Set up Cloudflare Pages
+2. (Optional) Use `./scripts` to set up
+3. Set up Cloudflare Pages
     - https://dash.cloudflare.com
-1. Happy Coding :tada:
+4. Happy Coding :tada:
 
 ## Variables
 
@@ -26,6 +26,7 @@ Template for React project on Cloudflare Pages
 - Vite
 - TypeScript
 - React
+- TailwindCSS
 - Sass (SCSS)
 - Playwright
     - Component Test (Experimental)
@@ -33,3 +34,4 @@ Template for React project on Cloudflare Pages
 - stylelint
 - Prettier
 - Web Vital
+- Renovate
