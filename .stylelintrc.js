@@ -11,5 +11,11 @@ module.exports = {
     'string-quotes': 'single',
     'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$',
     'keyframes-name-pattern': '^[a-z][a-zA-Z0-9]+$',
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind'],
+      },
+    ],
   },
 };
